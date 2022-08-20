@@ -1,7 +1,7 @@
 <div class="place-order-container">
   <h3>Place Order Page</h3>
   <form (ngSubmit)="submitOrder()">
-    <app-customer-detail></app-customer-detail>
+    <app-customer-detail [customerName]="pizzaOrder.customerName" [customerAddress]="pizzaOrder.customerAddress"></app-customer-detail>
     <button class="submit-btn" mat-raised-button color="primary" type="submit" [disabled]="isOrderInValid()">Submit</button>
   </form>
 </div>
