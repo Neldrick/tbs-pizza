@@ -1,3 +1,4 @@
+import { PizzaListModule } from './../../modules/pizza-order/pizza-list/pizza-list.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { PlaceOrderPageComponent } from './place-order-page.component';
@@ -12,6 +13,7 @@ import { CustomerDetailComponent } from 'src/app/modules/pizza-order/customer-de
   ],
   imports: [
     BrowserModule,
+    PizzaListModule,
     MatButtonModule,
     MatInputModule,
     FormsModule

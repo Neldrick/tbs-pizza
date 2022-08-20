@@ -1,13 +1,13 @@
 <div>
   <mat-form-field class="customer-name" appearance="fill">
     <mat-label>Name</mat-label>
-    <input matInput [(ngModel)]="customerName">
+    <input matInput [(ngModel)]="customerName" (change)="handleInputChange()">
   </mat-form-field>
 </div>
 <div>
   <mat-form-field class="customer-address" appearance="fill">
     <mat-label>Address</mat-label>
-    <input matInput [(ngModel)]="customerAddress">
+    <input matInput [(ngModel)]="customerAddress" (change)="handleInputChange()">
   </mat-form-field>
 </div>
 

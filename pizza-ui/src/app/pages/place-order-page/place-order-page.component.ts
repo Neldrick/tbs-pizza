@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IPizzaOrder } from 'src/core/interface/IPlaceOrder';
+import { ICustomer, IPizzaOrder } from 'src/core/interface/IPlaceOrder';
 
 @Component({
   selector: 'app-place-order-page',
@@ -8,8 +8,8 @@ import { IPizzaOrder } from 'src/core/interface/IPlaceOrder';
 })
 export class PlaceOrderPageComponent implements OnInit {
   pizzaOrder: IPizzaOrder = {
-    customerName: "",
-    customerAddress: "",
+    customerName: "dd",
+    customerAddress: "s",
     pizzas:[
       {size: "S", base: "Thin", topping: "Ham"}
     ]
@@ -22,5 +22,10 @@ export class PlaceOrderPageComponent implements OnInit {
     return false
   }
   submitOrder(){
+    console.log(this.pizzaOrder)
+  }
+  updateCustomer(customerInfo: ICustomer){
+    this.pizzaOrder.customerName = customerInfo.customerName
+    this.pizzaOrder.customerAddress = customerInfo.customerAddress
   }
 }
