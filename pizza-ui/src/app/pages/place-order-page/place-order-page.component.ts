@@ -11,5 +11,9 @@ export class PlaceOrderPageComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  isOrderInValid() {
+    return false
+  }
+  submitOrder(){
+  }
 }
