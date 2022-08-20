@@ -1,0 +1,22 @@
+<div class="pizza-selection-container">
+  <p>pizza</p>
+  <button class="delete-btn" mat-raised-button color="warn" (click)="handleDeletePress()">Delete</button>
+  <mat-form-field appearance="fill">
+    <mat-label>Size</mat-label>
+    <mat-select [(value)]="pizza.size">
+      <mat-option *ngFor="let size of sizes" [value]="size">{{size}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Topping</mat-label>
+    <mat-select [(value)]="pizza.topping">
+      <mat-option *ngFor="let topping of toppings" [value]="topping">{{topping}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Base</mat-label>
+    <mat-select [(value)]="pizza.base">
+      <mat-option *ngFor="let base of baseList" [value]="base">{{base}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
