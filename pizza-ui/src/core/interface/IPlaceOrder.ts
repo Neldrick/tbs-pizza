@@ -12,3 +12,19 @@ export interface IPizzaOrder{
   customerAddress: string
   pizzas: IPizza[]
 }
+
+
+export interface IOrderDetail{
+  id: string
+  customerName: string
+  customerAddress: string
+  pizzas: any
+  status: number
+  createTime: Date
+  updateTime: Date
+}
+
+export interface IOrderUpdate {
+  status: number
+  id: string
+}
