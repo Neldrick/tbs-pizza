@@ -31,7 +31,17 @@ export class DeliverPageComponent implements OnInit {
     });
   }
   updateStatus(id:string){
-    console.log(id)
+    const dto: IGeneralRequest<IOrderUpdate> = {
+      operatorName: "Manager",
+      operatorId: "345678",
+      payload: {
+        status: 2,
+        id:id
+      }
+    }
+    this.http.put<any>(`${baseUrl}/pizza`, dto).subscribe(res => {
+      this.loadData();
+    });
   }
 
 }
