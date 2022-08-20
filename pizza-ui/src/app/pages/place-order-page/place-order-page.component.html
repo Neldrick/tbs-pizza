@@ -1,1 +1,8 @@
-<p>place-order-page works!</p>
+<div class="place-order-container">
+  <h3>Place Order Page</h3>
+  <form (ngSubmit)="submitOrder()">
+    <app-customer-detail [customerName]="pizzaOrder.customerName" [customerAddress]="pizzaOrder.customerAddress" (customerDetailChangeEvent)="updateCustomer($event)"></app-customer-detail>
+    <app-pizza-list [pizzas]="pizzaOrder.pizzas"></app-pizza-list>
+    <button class="submit-btn" mat-raised-button color="primary" type="submit" [disabled]="isOrderInValid()">Submit</button>
+  </form>
+</div>

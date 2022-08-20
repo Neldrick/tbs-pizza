@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-customer-detail',
@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerDetailComponent implements OnInit {
 
+  @Input() customerName:string = ""
+  @Input() customerAddress:string = ""
+  @Output() customerDetailChangeEvent = new EventEmitter<{customerName:string, customerAddress:string}>()
   constructor() { }
 
   ngOnInit(): void {
+  }
+  handleInputChange(){
+    this.customerDetailChangeEvent.emit({
+      customerName: this.customerName,
+      customerAddress: this.customerAddress
+    })
   }
 
 }

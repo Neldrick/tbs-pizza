@@ -1,1 +1,8 @@
-<p>pizza-list works!</p>
+<div class="pizza-list-container">
+  <button class="add-btn" type="button" mat-raised-button color="primary" (click)="AddPizza()">Add</button>
+  <h4>Pizza:</h4>
+  <div *ngFor="let pizza of pizzas; index as i">
+    <app-pizza-selection [pizza]="pizza" [index]="i" (deletePizzaEvent)="removePizza($event)"></app-pizza-selection>
+
+  </div>
+</div>
