@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PlaceOrderPageModule } from './pages/place-order-page/place-order-page.module';
+import { DeliverTableComponent } from './modules/deliver-table/deliver-table.component';
+import { DeliverPageModule } from './pages/deliver-page/deliver-page.module';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,7 @@ import { PlaceOrderPageModule } from './pages/place-order-page/place-order-page.
     BrowserModule,
     AppRoutingModule,
     PlaceOrderPageModule,
+    DeliverPageModule,
     BrowserAnimationsModule,
     HttpClientModule
   ],
